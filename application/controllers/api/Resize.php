@@ -102,6 +102,7 @@ class Resize extends CI_Controller
         $config['upload_path'] = './assets/images/';
         $config['allowed_types'] = 'jpg|jpeg|png|gif';
         $this->load->library('upload', $config);
+
         if (!$this->upload->do_upload('image_file')) {
             echo $this->upload->display_errors();
         } else {

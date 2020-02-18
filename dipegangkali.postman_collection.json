@@ -1,0 +1,922 @@
+{
+	"info": {
+		"_postman_id": "a838c183-c6bd-45bd-8444-58f4d9183e3b",
+		"name": "dipegangkali",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pedagang",
+			"item": [
+				{
+					"name": "Register",
+					"item": [
+						{
+							"name": "21 Error nohp tersedia",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "razitulis@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "nohp",
+											"value": "082169146904",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/registerpedagang",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"registerpedagang"
+									]
+								},
+								"description": "Eror bahwa nomor handphone yang didaftarkan telah tersedia"
+							},
+							"response": []
+						},
+						{
+							"name": "201 succes register ",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "razit@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "nohp",
+											"value": "082169146904",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/registerpedagang",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"registerpedagang"
+									]
+								},
+								"description": "Mendaftar menjadi pedagang"
+							},
+							"response": []
+						},
+						{
+							"name": "20 Error email tersedia",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "razituli@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "nohp",
+											"value": "082169146904",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/registerpedagang",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"registerpedagang"
+									]
+								},
+								"description": "Email telah tersedia"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "22 email belum aktif",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "razitulia@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/loginpedagang",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"loginpedagang"
+									]
+								},
+								"description": "Akun belum di aktivasi"
+							},
+							"response": []
+						},
+						{
+							"name": "succes login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "razituli@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "newtokena",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/loginpedagang",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"loginpedagang"
+									]
+								},
+								"description": "Login succes"
+							},
+							"response": []
+						},
+						{
+							"name": "21 password salah",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "razituli@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admins",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "asdas",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/loginpedagang",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"loginpedagang"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "23 email belum tersedia",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "razituliq@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "asdawsd",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/loginpedagang",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"loginpedagang"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Otp Verivikasii",
+					"item": [
+						{
+							"name": "21 gagal update token",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "nohp",
+											"value": "082169146903",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "041197",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "tokennerw",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "asdasdasweawdq",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/otpverify",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"otpverify"
+									]
+								},
+								"description": "Token gagal di update karena token yang di update sama dengan token yang ada di database"
+							},
+							"response": []
+						},
+						{
+							"name": "20 otp yang dimasukan salah",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "nohp",
+											"value": "082169146903",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "041198",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "tokennerw",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "asdasdasweawdq",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/otpverify",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"otpverify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "succes verify otp",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "nohp",
+											"value": "082169146903",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "041197",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "tokennerw",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "asdasdasweawdq",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/otpverify",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"otpverify"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Catalog",
+					"item": [
+						{
+							"name": "Delete",
+							"item": [
+								{
+									"name": "succes delete barang",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id_catalog",
+													"value": "60",
+													"type": "text"
+												},
+												{
+													"key": "id_pedagang",
+													"value": "5",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/inputbarang",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"inputbarang"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "21 id kosong",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id_catalog",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/inputbarang",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"inputbarang"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "22 id tidak ditemukan",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id_catalog",
+													"value": "5",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/inputbarang",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"inputbarang"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "insert",
+							"item": [
+								{
+									"name": "succes input barang",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "id_pedagang",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "namabarang",
+													"value": "Nasi goreng",
+													"type": "text"
+												},
+												{
+													"key": "harga",
+													"value": "10000",
+													"type": "text"
+												},
+												{
+													"key": "deskripsi",
+													"value": "Nasi goreng super duper lezat",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/inputbarang",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"inputbarang"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "update",
+							"item": [],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "upload gambar catalog",
+							"item": [
+								{
+									"name": "insert",
+									"item": [
+										{
+											"name": "sukses upload image catalog",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "id_catalog",
+															"value": "60",
+															"type": "text"
+														},
+														{
+															"key": "gambar",
+															"type": "file",
+															"src": "/opt/lampp/htdocs/poliapi/assets/images/IMG_20191228_172341.jpg"
+														},
+														{
+															"key": "id_pedagang",
+															"value": "5",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{base_url}}/api/inputbarang/uploadimage",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"api",
+														"inputbarang",
+														"uploadimage"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "delete",
+									"item": [
+										{
+											"name": "sucess delete",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"value": "application/x-www-form-urlencoded",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "id_image",
+															"value": "4",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{base_url}}/api/inputbarang/uploadimage",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"api",
+														"inputbarang",
+														"uploadimage"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "21 id kosong",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"value": "application/x-www-form-urlencoded",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "id_image",
+															"value": "4",
+															"type": "text",
+															"disabled": true
+														}
+													]
+												},
+												"url": {
+													"raw": "{{base_url}}/api/inputbarang/uploadimage",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"api",
+														"inputbarang",
+														"uploadimage"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "22 id tidak ditemukan",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"value": "application/x-www-form-urlencoded",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "id_image",
+															"value": "1",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{base_url}}/api/inputbarang/uploadimage",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"api",
+														"inputbarang",
+														"uploadimage"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "update",
+									"item": [
+										{
+											"name": "succes update gambar catalog",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"value": "application/x-www-form-urlencoded",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "id_image",
+															"value": "5",
+															"type": "text"
+														},
+														{
+															"key": "id_catalog",
+															"value": "2",
+															"type": "text"
+														},
+														{
+															"key": "gambar",
+															"type": "file",
+															"src": "/opt/lampp/htdocs/poliapi/assets/images/IMG_20191231_094409.jpg"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{base_url}}/api/inputbarang/uploadimageupdate",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"api",
+														"inputbarang",
+														"uploadimageupdate"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

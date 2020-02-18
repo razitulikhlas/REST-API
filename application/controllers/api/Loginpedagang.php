@@ -34,6 +34,7 @@ class Loginpedagang extends CI_Controller
         // Construct the parent class
         parent::__construct();
         $this->load->model('Loginpedagang_model', 'login');
+
         $this->__resTraitConstruct();
 
         // Configure limits on our controller methods
@@ -50,6 +51,24 @@ class Loginpedagang extends CI_Controller
         $password    = $this->post('password');
         $token       = $this->post('token');
 
+        // login
+        $login = $this->login->login($email, $password);
+
+        // load authorization token library
+        $this->load->library('Authorization_Token');
+
+        $token_data['id']             = $login->id_pedagang;
+        $token_data['email_pedagang'] = $login->email_pedagang;
+        $token_data['nama_pedagang']  = $login->nama_pedagang;
+        $token_data['foto']           = $login->foto;
+        $token_data['nohp_pedagang']  = $login->nohp_pedagang;
+        $token_data['password']       = $login->password;
+        $token_data['time']           = time();
+        // generate token
+        $user_token = $this->authorization_token->generateToken($token_data);
+
+        // print_r($this->authorization_token->userData());
+        // exit;
         $login = $this->login->login($email, $password);
         if ($login == '20') {
             $this->response([
@@ -79,7 +98,8 @@ class Loginpedagang extends CI_Controller
                 // token sama yang didatabase
                 $this->response([
                     'status' => true,
-                    'data' => $login
+                    'data' => $login,
+                    'token_user' => $user_token
                 ], 200);
             } else {
                 // token berbeda

@@ -30,9 +30,9 @@ class MY_Model extends CI_Model
     public function get($id = null)
     {
         if ($id === null) {
-            return $this->db->get($this->table)->result_array();
+            return $this->db->get($this->table)->row();
         } else {
-            return $this->db->get_where($this->table, [$this->id => $id])->result_array();
+            return $this->db->get_where($this->table, [$this->id => $id])->row();
         }
     }
 
@@ -90,6 +90,9 @@ class MY_Model extends CI_Model
         $this->db->delete($this->detail, $where);
         return $this->db->affected_rows();
     }
+
+    // get gambar berdasarkan id catalog
+
 
     //fungsi untuk ambil subharga
     public function subHarga($sum, $join, $where)
